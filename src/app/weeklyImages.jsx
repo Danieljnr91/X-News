@@ -1,0 +1,74 @@
+import { Link } from 'expo-router'
+import { Image, Pressable, ScrollView, StyleSheet, View } from 'react-native'
+import WeeklyImagesPage, { ActualImages } from '../components/themedImages'
+
+const ImagePage = ({}) => {
+    return(
+            <WeeklyImagesPage>
+                <MainDisplay />
+            </WeeklyImagesPage>
+    )
+}
+
+const MainDisplay = ({}) => {
+    return(
+            <ScrollView >
+                 <View style={{position:'absolute',alignSelf:'flex-end',margin:9,backgroundColor:'rgb(110, 71, 238, 0.72)',borderRadius:7,padding:2}}>
+                    <Link href="/socials" asChild>
+                        <Pressable>
+                            <Image source={require('../../assets/arrow.png')} style={{width:40,height:40}}/>
+                        </Pressable>
+                    </Link>
+                </View>
+                <ActualImages>
+                    <Image source={require('../../assets/weeklyImages/img1.jpg')} style={styles.imgstyle}/>
+                    <Image source={require('../../assets/weeklyImages/img2.jpg')} style={styles.imgstyle}/>
+                </ActualImages>
+
+                <ActualImages>
+                    <Image source={require('../../assets/weeklyImages/img3.jpg')} style={styles.imgstyle}/>
+                    <Image source={require('../../assets/weeklyImages/img4.jpg')} style={styles.imgstyle}/>
+                </ActualImages>
+
+                <ActualImages>
+                    <Image source={require('../../assets/weeklyImages/img5.jpg')} style={styles.imgstyle}/>
+                    <Image source={require('../../assets/weeklyImages/img6.jpg')} style={styles.imgstyle}/>
+                </ActualImages>
+
+                <ActualImages>
+                    <Image source={require('../../assets/weeklyImages/img7.jpg')} style={styles.imgstyle}/>
+                    <Image source={require('../../assets/weeklyImages/img8.jpg')} style={styles.imgstyle}/>
+                </ActualImages>
+
+                <ActualImages>
+                    <Image source={require('../../assets/weeklyImages/img9.jpg')} style={styles.imgstyle}/>
+                    <Image source={require('../../assets/weeklyImages/img10.jpg')} style={styles.imgstyle}/>
+                </ActualImages>
+
+                <ActualImages>
+                    <Image source={require('../../assets/weeklyImages/img11.jpg')} style={styles.imgstyle}/>
+                    <Image source={require('../../assets/weeklyImages/img12.jpg')} style={styles.imgstyle}/>
+                </ActualImages>
+
+                <ActualImages>
+                    <Image source={require('../../assets/weeklyImages/img13.jpg')} style={styles.imgstyle}/>
+                    <Image source={require('../../assets/weeklyImages/img14.jpg')} style={styles.imgstyle}/>
+                </ActualImages>
+
+                <ActualImages></ActualImages>
+                <ActualImages></ActualImages>
+                <ActualImages></ActualImages>
+            </ScrollView>
+    )
+}
+
+export default ImagePage
+
+const styles = StyleSheet.create({
+    imgstyle:{
+        height:250,
+        width:150,
+        borderRadius:8,
+        
+    }
+})
